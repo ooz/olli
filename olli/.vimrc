@@ -1,6 +1,7 @@
 set number                                                    "set line numbering, abbr: nu
+
 colorscheme slate
-set guicursor+=a:blinkon0
+                                                  set guicursor+=a:blinkon0
 "set spell
 
 "Backup and swp directories
@@ -51,9 +52,43 @@ set scrolloff=3
 "set spelllang=en
 "set spellsuggest=9 "show only 9 suggestions for misspelled words
 
-" GVim options
+" # GVim options ############################################################
 "set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 "set guioptions-=r  "remove right-hand scroll bar
 
+
+" # Custom keybinds #########################################################
+" ## Avoiding Esc key ##
+inoremap <C-c> <Esc>
+nnoremap <C-c> i
+nnoremap <Space> i
+
+" ## Tab behaviour ##
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+inoremap <S-Tab> <Esc><<i
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+"nnoremap <C-s> :w
+"noremap <M-x> "+d
+"noremap <M-c> "+y
+"noremap <M-v> "+p
+
+" ## Shortcuts for movement ##
+noremap <A-j> <Down>
+noremap <A-k> <Up>
+noremap <A-h> <Left>
+noremap <A-l> <Right>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-h> <Left>
+inoremap <A-l> <Right>
+noremap <C-w> ^    
+noremap <C-e> <End>
+noremap <C-d> <Del>
+inoremap <C-w> <Esc>^i
+inoremap <C-e> <End>
+inoremap <C-d> <Del>
 
