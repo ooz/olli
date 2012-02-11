@@ -14,9 +14,9 @@ import Data.Monoid (All (All))
 myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fromList when using 'newKeys'
              [ 
 	       ((modm , xK_Escape)   , kill)
-	     , ((modm , xK_y)        , spawn $ XMonad.terminal conf)
---               ((modm, xK_y)              , withFocused (\f -> sendMessage (MinimizeWin f)))
---             , ((modm .|. shiftMask, xK_y), sendMessage RestoreNextMinimizedWin)
+	     , ((modm , xK_s)        , spawn $ XMonad.terminal conf)
+--               ((modm, xK_s)              , withFocused (\f -> sendMessage (MinimizeWin f)))
+--             , ((modm .|. shiftMask, xK_s), sendMessage RestoreNextMinimizedWin)
              ]
 
 newKeys x = M.union (keys defaultConfig x) (M.fromList (myKeys x))
