@@ -1,0 +1,15 @@
+[user]
+	name  = ooz
+	email = oliverzscheyge@gmail.com
+[core]
+	excludesfile = /home/olli/.gitignore_global
+[alias]
+	ci = commit
+	st = status
+	a = add
+    d = diff
+	co = checkout
+[advice]
+	statusHints = false
+[color]
+	ui = auto
