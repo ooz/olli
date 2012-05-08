@@ -3,18 +3,34 @@ import XMonad.Config.Gnome
 import XMonad.Layout.Minimize
 import qualified Data.Map as M
 import System.Exit -- exitWith
-import XMonad.Layout.NoBorders -- no fullscreen borders
+import XMonad.Layout.Fullscreen
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Gaps
 -- Fullscreen imports:
 import XMonad.Hooks.ManageHelpers
 import qualified XMonad.StackSet as W
-import Monad
+import Control.Monad
 import Data.Monoid (All (All))
 
+{-
+# Unity flavor sources:
+http://www.haskell.org/haskellwiki/Xmonad/Using_xmonad_in_Unity_2D
+http://markhansen.co.nz/xmonad-ubuntu-oneiric/
+https://gist.github.com/1300108
+-}
+
 --myLayout = minimize (Tall 1 (3/100) (1/2)) -- ||| Full
+--unityLayout = gaps [(U, 24)] $ layoutHook gnomeConfig
+unityLayout = gaps [(U, 24)] (layoutHook gnomeConfig) 
+          ||| noBorders (fullscreenFull Full)
+
 myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fromList when using 'newKeys'
              [ 
 	       ((modm , xK_Escape)   , kill)
 	     , ((modm , xK_s)        , spawn $ XMonad.terminal conf)
+         , ((modm , xK_x)        , spawn "firefox")
+         , ((modm , xK_d)        , spawn "nautilus")
+         , ((modm , xK_a)        , spawn "gnome-system-monitor")
 --               ((modm, xK_s)              , withFocused (\f -> sendMessage (MinimizeWin f)))
 --             , ((modm .|. shiftMask, xK_s), sendMessage RestoreNextMinimizedWin)
              ]
@@ -32,46 +48,16 @@ main = do
     , focusedBorderColor = "#000000" -- "#00FF00" -- terminal green -- "#A6E1FF" -- "green"
 --    , layoutHook = noBorders Full
 --    , layoutHook  = myLayout
+    , layoutHook = unityLayout
     , keys        = newKeys
 --    , keys        = myKeys
-    , handleEventHook = evHook -- Fullscreen issue fix
+    , manageHook = unityManageHook
     }
 
--- Fixing fullscreen presentation issues (= GNOME panel still visible in fullscreen)
--- from:
--- http://code.google.com/p/xmonad/issues/detail?id=339
--- http://code.google.com/p/xmonad/issues/attachmentText?id=339&aid=6617379484742651517&name=totemFullscreen.hs&token=df67f434b35f4cf6a06476b18ee5892d
--- Helper functions to fullscreen the window
-fullFloat, tileWin :: Window -> X ()
-fullFloat w = windows $ W.float w r
-    where r = W.RationalRect 0 0 1 1
-tileWin w = windows $ W.sink w
+unityManageHook = composeAll (
+    [ manageHook gnomeConfig
+    , className =? "Unity-2d-panel" --> doIgnore
+--    , className =? "Unity-2d-launcher" --> doFloat
+    , className =? "Unity-2d-launcher" --> doIgnore
+    ])
 
-evHook :: Event -> X All
-evHook (ClientMessageEvent _ _ _ dpy win typ dat) = do
-  state <- getAtom "_NET_WM_STATE"
-  fullsc <- getAtom "_NET_WM_STATE_FULLSCREEN"
-  isFull <- runQuery isFullscreen win
-
-  -- Constants for the _NET_WM_STATE protocol
-  let remove = 0
-      add = 1
-      toggle = 2
-
-      -- The ATOM property type for changeProperty
-      ptype = 4 
-
-      action = head dat
-
-  when (typ == state && (fromIntegral fullsc) `elem` tail dat) $ do
-    when (action == add || (action == toggle && not isFull)) $ do
-         io $ changeProperty32 dpy win state ptype propModeReplace [fromIntegral fullsc]
-         fullFloat win
-    when (head dat == remove || (action == toggle && isFull)) $ do
-         io $ changeProperty32 dpy win state ptype propModeReplace []
-         tileWin win
-
-  -- It shouldn't be necessary for xmonad to do anything more with this event
-  return $ All False
-
-evHook _ = return $ All True
