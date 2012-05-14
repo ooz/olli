@@ -30,6 +30,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
 	     , ((modm , xK_s)        , spawn $ XMonad.terminal conf)
          , ((modm , xK_x)        , spawn "firefox")
          , ((modm , xK_d)        , spawn "nautilus")
+         , ((modm , xK_v)        , spawn "gvim")
          , ((modm , xK_a)        , spawn "gnome-system-monitor")
 --               ((modm, xK_s)              , withFocused (\f -> sendMessage (MinimizeWin f)))
 --             , ((modm .|. shiftMask, xK_s), sendMessage RestoreNextMinimizedWin)
