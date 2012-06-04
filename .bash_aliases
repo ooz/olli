@@ -9,3 +9,4 @@ alias psm='ps aux | awk '"'"'{print $4i"\t"$11}'"'"' | sort | uniq -c | awk '"'"
 # Calendar aliases
 alias call='~/.script/cal.py -14'
 alias calle='vi ~/.calendar/calendar'
+alias callb='vi ~/.calendar/birthdays'
