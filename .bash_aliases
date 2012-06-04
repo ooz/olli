@@ -7,5 +7,5 @@ alias mkdir='mkdir -p'
 alias psm='ps aux | awk '"'"'{print $4i"\t"$11}'"'"' | sort | uniq -c | awk '"'"'{print $2" "$1" "$3}'"'"' | sort -nr'
 
 # Calendar aliases
-alias call='~/.olli/cal.py -14'
+alias call='~/.script/cal.py -14'
 alias calle='vi ~/.calendar/calendar'
