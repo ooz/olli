@@ -77,14 +77,14 @@ vnoremap <S-Tab> <gv
 "noremap <M-v> "+p
 
 " ## Shortcuts for movement ##
-noremap <A-j> <Down>
-noremap <A-k> <Up>
-noremap <A-h> <Left>
-noremap <A-l> <Right>
-inoremap <A-j> <Down>
-inoremap <A-k> <Up>
-inoremap <A-h> <Left>
-inoremap <A-l> <Right>
+noremap <C-j> <Down>
+noremap <C-k> <Up>
+noremap <C-h> <Left>
+noremap <C-l> <Right>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 noremap <C-w> ^    
 noremap <C-e> <End>
 noremap <C-d> <Del>
@@ -92,3 +92,12 @@ inoremap <C-w> <Esc>^i
 inoremap <C-e> <End>
 inoremap <C-d> <Del>
 
+" ## Line movement ##
+" source: http://vim.wikia.com/wiki/Moving_lines_up_or_down
+" just using Shift instead of Alt
+nnoremap <S-j> :m+<CR>==
+nnoremap <S-k> :m-2<CR>==
+inoremap <S-j> <Esc>:m+<CR>==gi
+inoremap <S-k> <Esc>:m-2<CR>==gi
+vnoremap <S-j> :m'>+<CR>gv=gv
+vnoremap <S-k> :m-2<CR>gv=gv
