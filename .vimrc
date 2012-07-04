@@ -72,9 +72,9 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 "nnoremap <C-s> :w
-"noremap <M-x> "+d
-"noremap <M-c> "+y
-"noremap <M-v> "+p
+noremap <F6> "+d
+noremap <F7> "+y
+noremap <F8> "+p
 
 " ## Shortcuts for movement ##
 noremap <C-j> <Down>
