@@ -97,7 +97,7 @@ inoremap <C-d> <Del>
 " just using Shift instead of Alt
 nnoremap <S-j> :m+<CR>==
 nnoremap <S-k> :m-2<CR>==
-inoremap <S-j> <Esc>:m+<CR>==gi
-inoremap <S-k> <Esc>:m-2<CR>==gi
+"inoremap <S-j> <Esc>:m+<CR>==gi
+"inoremap <S-k> <Esc>:m-2<CR>==gi
 vnoremap <S-j> :m'>+<CR>gv=gv
 vnoremap <S-k> :m-2<CR>gv=gv
