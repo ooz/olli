@@ -15,10 +15,16 @@ set autochdir                                                 " Change working d
 set shortmess+=I " Disable welcome message
 
 set smartindent
-set shiftwidth=4                                              "indent width for auto indent
 filetype indent on
+set shiftwidth=4                                              "indent width for auto indent
 set tabstop=4                                                 "tabstop, abbr: ts
-set expandtab                                                 "turn tabs into spaces
+"Use tabs only in makefiles, expand tabs everywhere else
+let _curfile = expand("%:t")
+if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
+    set noexpandtab
+else
+    set expandtab                                                 "turn tabs into spaces
+endif
 
 "Modeline support
 set modeline
