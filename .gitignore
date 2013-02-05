@@ -1,5 +1,8 @@
 .*
 
+# Ignore vim history for security reasons
+.vim/.netrwhist
+
 Desktop/
 Downloads/
 downloads/
