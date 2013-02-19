@@ -4,11 +4,12 @@ colorscheme slate
                                                   set guicursor+=a:blinkon0
 "set spell
 
-"Backup and swp
+"Backup, swp and Jesus
 set nobackup
 set noswapfile
 "set backupdir=~/.vim/swp
 "set directory=~/.vim/swp
+set autowrite
 
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)] "Informative status line
 set autochdir                                                 " Change working directory to the directory containing the current file.
