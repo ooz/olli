@@ -69,6 +69,7 @@ set guioptions-=T  "remove toolbar
 
 " # Custom keybinds #########################################################
 " ## Avoiding Esc key ##
+inoremap jj <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> i
 nnoremap <Space> i
@@ -81,6 +82,9 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 "nnoremap <C-s> :w
+noremap <F2> "+d
+noremap <F3> "+y
+noremap <F4> "+p
 noremap <F6> "+d
 noremap <F7> "+y
 noremap <F8> "+p
@@ -94,7 +98,8 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-noremap <C-w> ^    
+"noremap <C-w> ^    
+noremap ° ^
 noremap <C-e> <End>
 noremap <C-d> <Del>
 inoremap <C-w> <Esc>^i
