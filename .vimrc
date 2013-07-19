@@ -115,3 +115,14 @@ nnoremap <S-k> :m-2<CR>==
 "inoremap <S-k> <Esc>:m-2<CR>==gi
 vnoremap <S-j> :m'>+<CR>gv=gv
 vnoremap <S-k> :m-2<CR>gv=gv
+
+
+"= AUTOCMDs =
+"============
+
+" Remove trailing white space from
+" http://thanthese.wordpress.com/2010/05/07/automatically-trim-trailing-whitespace-in-vim/
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
+autocmd! BufWritePre *.py mark ' | silent! %s/\s\+$// | norm ''
+
+
