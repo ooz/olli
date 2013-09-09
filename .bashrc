@@ -100,3 +100,6 @@ fi
 
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
+
+# Adding Android tools to PATH
+export PATH=$PATH:~/code/android/sdk/tools/
