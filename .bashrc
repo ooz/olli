@@ -102,4 +102,4 @@ fi
 export PYTHONSTARTUP=~/.pythonrc
 
 # Adding Android tools to PATH
-export PATH=$PATH:~/code/android/sdk/tools/
+export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/
