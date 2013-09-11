@@ -9,6 +9,8 @@
 	a = add
     d = diff
 	co = checkout
+    l = log
+    b = branch
 [advice]
 	statusHints = false
 [color]
