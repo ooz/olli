@@ -1,22 +1,30 @@
-set number                                                    "set line numbering, abbr: nu
+" set line numbering, abbr: nu
+set number 
 
 colorscheme slate
-                                                  set guicursor+=a:blinkon0
+set guicursor+=a:blinkon0
 "set spell
 
-"Backup, swp and Jesus
+" Backup, swp and Jesus
 set nobackup
 set noswapfile
 "set backupdir=~/.vim/swp
 "set directory=~/.vim/swp
 set autowrite
 
-set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)] "Informative status line
-set autochdir                                                 " Change working directory to the directory containing the current file.
-set shortmess+=I " Disable welcome message
+" Informative status line
+set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
+" Change working directory to the directory containing the current file.
+set autochdir                                                
+" Disable welcome message
+set shortmess+=I
+
+" Plugin management with pathogen
+execute pathogen#infect()
+syntax on
 
 set smartindent
-filetype indent on
+filetype plugin indent on
 set shiftwidth=4                                              "indent width for auto indent
 set tabstop=4                                                 "tabstop, abbr: ts
 "Use tabs only in makefiles, expand tabs everywhere else
