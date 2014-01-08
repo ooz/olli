@@ -22,9 +22,9 @@ set shortmess+=I
 " Plugin management with pathogen
 execute pathogen#infect()
 syntax on
+filetype indent on
 
 set smartindent
-filetype plugin indent on
 set shiftwidth=4                                              "indent width for auto indent
 set tabstop=4                                                 "tabstop, abbr: ts
 "Use tabs only in makefiles, expand tabs everywhere else
