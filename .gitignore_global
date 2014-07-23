@@ -11,6 +11,7 @@
 *.so
 *.hi
 *.pyc
+*.pyo
 
 # Tex
 *.aux
