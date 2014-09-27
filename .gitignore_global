@@ -42,3 +42,18 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+# LaTeX generated files #
+#########################
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.glg
+*.glo
+*.gls
+*.ist
+*.lof
+*.lol
+*.out
