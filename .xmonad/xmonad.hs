@@ -8,6 +8,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Gaps
 -- Fullscreen imports:
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.SetWMName
 import qualified XMonad.StackSet as W
 import Control.Monad
 import Data.Monoid (All (All))
@@ -53,6 +54,7 @@ main = do
 --    , layoutHook = noBorders Full
 --    , layoutHook  = myLayout
     , layoutHook = unityLayout
+    , startupHook = setWMName "LG3D" -- Fixes Intellij Idea https://bbs.archlinux.org/viewtopic.php?id=95437
     , keys        = newKeys
 --    , keys        = myKeys
     , manageHook = unityManageHook
