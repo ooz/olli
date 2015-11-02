@@ -16,13 +16,13 @@
   <section id="vars">
 		
 		<set name="ANDROID_SETUP" value="true" />
-		<set name="ANDROID_NDK_ROOT"    value="${HOME}/code/android/ndk" />
-		<set name="ANDROID_NDK_DIR"     value="${HOME}/code/android//" />
-		<set name="ANDROID_ROOT"        value="${HOME}/code/android/" />
-        <set name="ANDROID_SDK"         value="${HOME}/code/android/sdk" />
-		<set name="ANT_HOME"            value="/usr/share/ant" />
-		<set name="SDK_ROOT"            value="${HOME}/code/" />
-		<set name="JAVA_HOME"           value="/usr/lib/jvm/java-6-openjdk" />
+		<set name="ANDROID_NDK_ROOT" value="/home/olli/code/android/ndk" />
+		<set name="ANDROID_NDK_DIR" value="/home/olli/code/android//" />
+		<set name="ANT_HOME" value="/usr/share/ant" />
+		<set name="SDK_ROOT" value="/home/olli/code/" />
+		<set name="ANDROID_ROOT" value="/home/olli/code/android/" />
+		<set name="ANDROID_SDK" value="/home/olli/code/android/sdk" />
+		<set name="JAVA_HOME" value="/usr/lib/jvm/java-6-openjdk-amd64" />
 		
 	</section>
 
