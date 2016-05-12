@@ -32,6 +32,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
          , ((modm , xK_x)               , spawn "firefox")
          , ((modm , xK_d)               , spawn "nautilus")
          , ((modm , xK_v)               , spawn "gvim")
+         , ((modm , xK_o)               , spawn "atom")
          , ((modm , xK_b)               , spawn "subl")
          , ((modm , xK_a)               , spawn "gnome-system-monitor")
          , ((modm , xK_c)               , spawn "chromium-browser")
