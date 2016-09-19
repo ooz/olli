@@ -1,5 +1,5 @@
 [user]
-	name  = ooz
+	name = ooz
 	email = oliverzscheyge@gmail.com
 [core]
 	excludesfile = /home/olli/.gitignore_global
