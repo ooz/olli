@@ -105,3 +105,8 @@ export PYTHONSTARTUP=~/.pythonrc
 export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~/code/android/apktool/:~/code/android/dex2jar/:~/code/android/ndk/
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
+
+# ePages bashrc
+if [ -f ~/Dropbox/epages/bashrc_ext ]; then
+    . ~/Dropbox/epages/bashrc_ext
+fi
