@@ -1,8 +1,10 @@
 [user]
-	name = ooz
-	email = oliverzscheyge@gmail.com
+	name  = Oliver Zscheyge
+	email = o.zscheyge@epages.com
 [core]
 	excludesfile = /home/olli/.gitignore_global
+	eol = lf
+	autocrlf = input
 [alias]
 	ci = commit
 	st = status
