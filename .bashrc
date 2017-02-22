@@ -123,3 +123,6 @@ export PYTHONSTARTUP=~/.pythonrc
 export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~/code/android/apktool/:~/code/android/dex2jar/:~/code/android/ndk/
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
+
+# Add IntelliJ
+export PATH=$PATH:/opt/idea-IC/bin/
