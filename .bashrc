@@ -124,5 +124,3 @@ export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
 
-# Add IntelliJ
-export PATH=$PATH:/opt/idea-IC/bin/
