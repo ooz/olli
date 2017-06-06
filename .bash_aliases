@@ -17,3 +17,5 @@ alias callb='vi ~/.calendar/birthdays'
 # Volume
 alias vol='~/.script/volume.sh'
 
+# Git
+alias gitUserOoz='git config user.name "ooz"; git config user.email ooz@users.noreply.github.com'
