@@ -12,6 +12,7 @@
 *.hi
 *.pyc
 *.pyo
+Pipfile.lock
 
 # Tex
 *.aux
