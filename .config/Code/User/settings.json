@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.trimTrailingWhitespace": true,
+    "git.ignoreLegacyWarning": true,
+    "git.ignoreLimitWarning": true,
+    "window.menuBarVisibility": "default",
+    "workbench.sideBar.location": "left",
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1,
+    "workbench.welcome.enabled": false
+}
