@@ -105,6 +105,19 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Dropbox bashrc extension
+expected="5e71aedf444505e8d5304ef38c50f0b0d279d05d272c6372f5a326ab7cedb4fb"
+if [ -f ~/Dropbox/.bashrc_ext ]; then
+    signature=$(sha256sum ~/Dropbox/.bashrc_ext | cut -d' ' -f1)
+    if [ "$signature" == "$expected" ]; then 
+        . ~/Dropbox/.bashrc_ext
+    else
+        echo "Signature mismatch: ~/Dropbox/.bashrc_ext!"
+        echo "Expected: $expected"
+        echo "Actual:   $signature"
+    fi
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
