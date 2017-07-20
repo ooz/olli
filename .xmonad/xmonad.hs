@@ -35,6 +35,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
          , ((modm , xK_o)               , spawn "code")
          , ((modm , xK_a)               , spawn "gnome-system-monitor")
          , ((modm , xK_c)               , spawn "chromium-browser")
+         , ((modm , xK_i)               , spawn "insomnia")
          , ((modm .|. shiftMask , xK_d) , spawn "killall nautilus; nautilus")
          , ((modm .|. shiftMask , xK_Page_Up) , spawn "gnome-session-quit --reboot")
          , ((modm .|. shiftMask , xK_Page_Down) , spawn "gnome-session-quit --power-off")
