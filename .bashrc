@@ -137,3 +137,7 @@ export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
 
+# GOPATH support
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
+
