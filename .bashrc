@@ -131,6 +131,7 @@ fi
 
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages
 
 # Adding Android tools to PATH
 export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~/code/android/apktool/:~/code/android/dex2jar/:~/code/android/ndk/
