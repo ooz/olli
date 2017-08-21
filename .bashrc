@@ -131,9 +131,14 @@ fi
 
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
+export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages
 
 # Adding Android tools to PATH
 export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~/code/android/apktool/:~/code/android/dex2jar/:~/code/android/ndk/
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
+
+# GOPATH support
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
 

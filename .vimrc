@@ -14,8 +14,11 @@ set autowrite
 
 " Informative status line
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
+
 " Change working directory to the directory containing the current file.
-set autochdir                                                
+autocmd BufEnter * silent! lcd %:p:h
+"set autochdir                                                
+
 " Disable welcome message
 set shortmess+=I
 
