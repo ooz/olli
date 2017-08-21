@@ -1,21 +1,7 @@
 .*
+# Ignore everything non-hidden by default, use force add to track it
+*
 
 # Ignore vim history for security reasons
 .vim/.netrwhist
-
-Desktop/
-Downloads/
-downloads/
-Dropbox/
-templates/
-
-iMacros/
-
-code/
-music/
-olli/
-public/
-text/
-test/
-studies/
 
