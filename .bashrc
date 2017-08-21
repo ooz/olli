@@ -129,6 +129,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Extend PATH to include personal scripts
+export PATH=$PATH:~/.script/
+
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
 export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.5/site-packages
