@@ -29,6 +29,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
              [ 
 	       ((modm , xK_Escape)          , kill)
 	     , ((modm , xK_s)               , spawn $ XMonad.terminal conf)
+	     , ((modm , xK_f)               , spawn "gnome-terminal -e '/usr/bin/fish'")
          , ((modm , xK_x)               , spawn "firefox")
          , ((modm , xK_d)               , spawn "nautilus")
          , ((modm , xK_v)               , spawn "gvim")
@@ -39,8 +40,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
          , ((modm .|. shiftMask , xK_d) , spawn "killall nautilus; nautilus")
          , ((modm .|. shiftMask , xK_Page_Up) , spawn "gnome-session-quit --reboot")
          , ((modm .|. shiftMask , xK_Page_Down) , spawn "gnome-session-quit --power-off")
---               ((modm, xK_s)              , withFocused (\f -> sendMessage (MinimizeWin f)))
---             , ((modm .|. shiftMask, xK_s), sendMessage RestoreNextMinimizedWin)
              ]
 
 newKeys x = M.union (keys defaultConfig x) (M.fromList (myKeys x))
