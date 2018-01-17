@@ -106,7 +106,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Dropbox bashrc extension
-expected="cc073865159b54d01bb0593898b1cff2771ac96e7a57e2828b1306c1341c7f37"
+expected="706669932bdd739dfdd63617769370680230e4d81d698ff3862b56224abe6c03"
 if [ -f ~/Dropbox/.bashrc_ext ]; then
     signature=$(sha256sum ~/Dropbox/.bashrc_ext | cut -d' ' -f1)
     if [ "$signature" == "$expected" ]; then
