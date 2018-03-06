@@ -2,6 +2,7 @@
 # Ignore everything non-hidden by default, use force add to track it
 *
 
-# Ignore vim history for security reasons
+# Ignore bash and vim history for security reasons
+.bash_history
 .vim/.netrwhist
 
