@@ -11,5 +11,8 @@
     "editor.fontFamily": "monospace",
     "editor.fontWeight": "bold",
     "python.pythonPath": "/usr/bin/python",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "rest-client.enableTelemetry": false
 }
