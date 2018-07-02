@@ -15,5 +15,11 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "rest-client.enableTelemetry": false,
-    "workbench.statusBar.feedback.visible": false
+    "workbench.statusBar.feedback.visible": false,
+    "spellright.language": "English (American)",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
 }
