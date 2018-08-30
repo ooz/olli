@@ -7,19 +7,10 @@
     "workbench.sideBar.location": "left",
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": false,
-    "window.zoomLevel": 0,
-    "editor.fontFamily": "monospace",
-    "editor.fontWeight": "bold",
     "python.pythonPath": "/usr/bin/python",
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "rest-client.enableTelemetry": false,
     "workbench.statusBar.feedback.visible": false,
-    "spellright.language": "English (American)",
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext"
-    ]
+    "window.zoomLevel": 0,
 }
