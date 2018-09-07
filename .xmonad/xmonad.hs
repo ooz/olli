@@ -8,7 +8,6 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Gaps
 -- Fullscreen imports:
 import XMonad.Hooks.ManageHelpers
-import XMonad.Hooks.SetWMName
 import qualified XMonad.StackSet as W
 import Control.Monad
 import Data.Monoid (All (All))
@@ -22,11 +21,11 @@ https://gist.github.com/1300108
 
 --myLayout = minimize (Tall 1 (3/100) (1/2)) -- ||| Full
 --unityLayout = gaps [(U, 24)] $ layoutHook gnomeConfig
-unityLayout = gaps [(U, 24)] (layoutHook gnomeConfig) 
+unityLayout = gaps [(U, 24)] (layoutHook gnomeConfig)
           ||| noBorders (fullscreenFull Full)
 
 myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fromList when using 'newKeys'
-             [ 
+             [
 	       ((modm , xK_Escape)          , kill)
 	     , ((modm , xK_s)               , spawn $ XMonad.terminal conf)
 	     , ((modm , xK_f)               , spawn "gnome-terminal -e '/usr/bin/fish'")
@@ -57,9 +56,7 @@ main = do
 --    , layoutHook = noBorders Full
 --    , layoutHook  = myLayout
     , layoutHook = unityLayout
-    , startupHook = setWMName "LG3D" -- Fixes Intellij Idea https://bbs.archlinux.org/viewtopic.php?id=95437
-    , keys        = newKeys
---    , keys        = myKeys
+    , keys       = newKeys
     , manageHook = unityManageHook
     }
 
