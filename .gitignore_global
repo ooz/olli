@@ -12,7 +12,6 @@
 *.hi
 *.pyc
 *.pyo
-Pipfile.lock
 
 # pytest
 .pytest_cache/
