@@ -133,6 +133,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# Termux bash completion
+if [ -f /data/data/com.termux/files/usr/share/bash-completion/bash_completion ]; then
+  . /data/data/com.termux/files/usr/share/bash-completion/bash_completion
+fi
 
 # Extend PATH to include personal scripts
 export PATH=$PATH:~/.script/
