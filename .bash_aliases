@@ -19,3 +19,12 @@ alias vol='~/.script/volume.sh'
 
 # Git
 alias gitUserOoz='git config user.name "ooz"; git config user.email ooz@users.noreply.github.com'
+
+# Java / Gradle / Idea
+alias gw="./gradlew $@"
+alias cleanIdea='rm -rf .idea/ .settings/ .classpath *.iml .project; ./gradlew cleanIdea cleanIdeaWorkspace'
+alias gradleBuild='./gradlew clean build'
+alias gradleBuildIdea='./gradlew clean build idea'
+alias gradleIdea='./gradlew idea'
+alias gradleRefresh='./gradlew build --refresh-dependencies -PrefreshDynamicDeps"
+
