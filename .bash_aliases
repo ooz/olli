@@ -26,5 +26,5 @@ alias cleanIdea='rm -rf .idea/ .settings/ .classpath *.iml .project; ./gradlew c
 alias gradleBuild='./gradlew clean build'
 alias gradleBuildIdea='./gradlew clean build idea'
 alias gradleIdea='./gradlew idea'
-alias gradleRefresh='./gradlew build --refresh-dependencies -PrefreshDynamicDeps"
+alias gradleRefresh='./gradlew build --refresh-dependencies -PrefreshDynamicDeps'
 
