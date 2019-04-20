@@ -152,5 +152,5 @@ export ANDROID_HOME=~/code/android/sdk/
 
 # GOPATH support
 export GOPATH=$HOME/code/go
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
