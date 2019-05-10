@@ -111,7 +111,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Dropbox bashrc extension
-expected="7009a01c716c40af724255ec98cc1ed9878e21f2add399657215e904991c950a"
+expected="585c3c0f12e6279dfabe26060eab4a3f3f790e1c194e16e32a7c8b9db8bdd05f"
 if [ -f ~/Dropbox/.bashrc_ext ]; then
     signature=$(sha256sum ~/Dropbox/.bashrc_ext | cut -d' ' -f1)
     if [ "$signature" == "$expected" ]; then
@@ -154,3 +154,6 @@ export ANDROID_HOME=~/code/android/sdk/
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$(go env GOPATH)/bin
 
+# SDKMAN (orginal message: "THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!")
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
