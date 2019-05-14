@@ -140,6 +140,8 @@ fi
 
 # Extend PATH to include personal scripts
 export PATH=$PATH:~/.script/
+# cd directly to projects
+export CDPATH=~/code
 
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
