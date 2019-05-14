@@ -140,6 +140,8 @@ fi
 
 # Extend PATH to include personal scripts
 export PATH=$PATH:~/.script/
+# cd directly to projects
+export CDPATH=~/code
 
 # Python configuration (e.g. for auto completion)
 export PYTHONSTARTUP=~/.pythonrc
@@ -154,3 +156,6 @@ export ANDROID_HOME=~/code/android/sdk/
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$(go env GOPATH)/bin
 
+# SDKMAN (orginal message: "THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!")
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
