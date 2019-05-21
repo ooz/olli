@@ -30,7 +30,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
 	     , ((modm , xK_s)               , spawn $ XMonad.terminal conf)
 	     , ((modm , xK_f)               , spawn "gnome-terminal -e '/usr/bin/fish'")
          , ((modm , xK_x)               , spawn "firefox")
-         , ((modm , xK_d)               , spawn "nautilus")
+         , ((modm , xK_d)               , spawn "nautilus --new-window")
          , ((modm , xK_b)               , spawn "gvim")
          , ((modm , xK_v)               , spawn "code")
          , ((modm , xK_o)               , spawn "opera")
