@@ -13,4 +13,15 @@
     "telemetry.enableTelemetry": false,
     "workbench.statusBar.feedback.visible": false,
     "window.zoomLevel": 0,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "spellright.language": [
+        "English (American)",
+        "German_de_DE"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
 }
