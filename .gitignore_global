@@ -13,7 +13,8 @@
 *.pyc
 *.pyo
 
-# pytest
+# pytest and coverage
+.coverage
 .pytest_cache/
 
 # nodejs
