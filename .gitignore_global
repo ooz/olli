@@ -15,6 +15,7 @@
 
 # pytest and coverage
 .coverage
+htmlcov/
 .pytest_cache/
 
 # nodejs
