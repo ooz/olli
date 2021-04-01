@@ -3,6 +3,9 @@
 "Further inspiration:
 " https://vimuser.org/vimrc.txt
 
+"Plugin management with pathogen
+execute pathogen#infect()
+
 "UI
 set nu "Line numbers
 if &t_Co >= 256 || has('gui_running')
@@ -41,16 +44,13 @@ set autowrite
 "set undodir=~/.vim/undo
 set hidden "Keep unsaved buffer even when opening new file
 
-"Plugin management with pathogen
-execute pathogen#infect()
-
 filetype indent on
 set autoindent
 set smartindent
-set tabstop=4     "tabstop, abbr: ts
-set shiftwidth=4  "indent width for auto indent
-set showmatch     " show matching parenthesis
-"set shiftround    " use multiple of shiftwidth when indenting with '<' or '>'
+set tabstop=4     "Short: ts
+set shiftwidth=4  "Indent width for autoindent
+set showmatch     "Show matching parenthesis
+"set shiftround    "Use multiple of shiftwidth when indenting with '<' or '>'
 "Use tabs only in Makefiles, expand tabs everywhere else
 let _curfile = expand("%:t")
 if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
@@ -76,14 +76,14 @@ set spelllang=en,de
 "set spellsuggest=9 "show only 9 suggestions for misspelled words
 
 "Custom keybinds
-" use comma instead of shift + . for :
+"Use , instead of shift+. for :
 nnoremap , :
+"Use w!! to sudo write a file that was not opened with su privileges
+cmap w!! w !sudo tee % >/dev/null
 
 "Avoiding Esc key
 inoremap <C-c> <Esc>
 nnoremap <C-c> i
-inoremap <C-Space> <Esc>
-nnoremap <Space> i
 
 "Tab behaviour
 nnoremap <Tab> >>
@@ -92,9 +92,9 @@ inoremap <S-Tab> <Esc><<i
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-"nnoremap <C-s> :w
+"Functions keys for copy-pasting
 noremap <F2> "+d
-noremap <F3> "+y
+noremap <F3> Uy
 noremap <F4> "+p
 "Copy current buffer/file to clipboard
 map <F5> :%y+<CR>
@@ -129,9 +129,6 @@ nnoremap <S-k> :m-2<CR>==
 "inoremap <S-k> <Esc>:m-2<CR>==gi
 vnoremap <S-j> :m'>+<CR>gv=gv
 vnoremap <S-k> :m-2<CR>gv=gv
-
-"Use w!! to sudo write a file that was not opened with su privileges
-cmap w!! w !sudo tee % >/dev/null
 
 "AUTOCMDs (checked for older vim versions)
 if has('autocmd')
