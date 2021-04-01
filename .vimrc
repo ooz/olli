@@ -11,7 +11,7 @@ endif
 if &t_Co > 2 || has('gui_running')
     syntax on "Only highlight syntax if terminal has colors
 endif
-set guicursor+=a:blinkon0
+"set guicursor+=a:blinkon0
 set noerrorbells "Don't beep
 "set visualbell   "Don't beep, but blink ;)
 set shortmess+=I "Disable welcome message
@@ -19,7 +19,7 @@ set shortmess+=I "Disable welcome message
 set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 "Text width
 set tw=0 wrap linebreak
-set colorcolumn=80
+"set colorcolumn=80
 "set tw=80 wrap
 set scrolloff=3 "Have 3 lines of offset (or buffer) when scrolling
 "GVim options
@@ -29,7 +29,7 @@ set guioptions-=T  "remove toolbar
 
 "Search
 set incsearch "Incremental search showing matches while typing
-set hlsearch  "Highlight search terms, hard to read with some themes
+"set hlsearch  "Highlight search terms, hard to read with some themes
 
 "Backup, swap and buffers
 set nobackup
@@ -80,9 +80,9 @@ set spelllang=en,de
 nnoremap , :
 
 "Avoiding Esc key
-inoremap jj <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> i
+inoremap <C-Space> <Esc>
 nnoremap <Space> i
 
 "Tab behaviour
@@ -137,7 +137,6 @@ cmap w!! w !sudo tee % >/dev/null
 if has('autocmd')
     "Change working directory to the directory containing the current file.
     autocmd BufEnter * silent! lcd %:p:h
-
     "Remove trailing white space from files
     " http://thanthese.wordpress.com/2010/05/07/automatically-trim-trailing-whitespace-in-vim/
     " http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim
