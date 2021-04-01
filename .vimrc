@@ -79,13 +79,13 @@ set spelllang=en,de
 " use comma instead of shift + . for :
 nnoremap , :
 
-" ## Avoiding Esc key ##
+"Avoiding Esc key
 inoremap jj <Esc>
 inoremap <C-c> <Esc>
 nnoremap <C-c> i
 nnoremap <Space> i
 
-" ## Tab behaviour ##
+"Tab behaviour
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 inoremap <S-Tab> <Esc><<i
@@ -120,9 +120,9 @@ inoremap <C-w> <Esc>^i
 inoremap <C-e> <End>
 inoremap <C-d> <Del>
 
-" ## Line movement ##
-" source: http://vim.wikia.com/wiki/Moving_lines_up_or_down
-" just using Shift instead of Alt
+"Line movement
+" http://vim.wikia.com/wiki/Moving_lines_up_or_down
+" (using Shift instead of Alt)
 nnoremap <S-j> :m+<CR>==
 nnoremap <S-k> :m-2<CR>==
 "inoremap <S-j> <Esc>:m+<CR>==gi
