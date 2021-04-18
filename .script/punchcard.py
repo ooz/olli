@@ -128,17 +128,21 @@ def main(args):
     start_date = now_date()
 
     try:
+        prev_print = ''
         while True:
             time.sleep(FIVE_MINUTES_IN_SECONDS)
             current = now()
-            print(format_session(difference_in_seconds(start, current)))
+            update_output = format_session(difference_in_seconds(start, current))
+            sys.stdout.write('\b' * len(prev_print) + update_output)
+            sys.stdout.flush()
+            prev_print = update_output
 
     except KeyboardInterrupt:
         end = now()
         duration_in_seconds = difference_in_seconds(start, end)
         work = Work(start_date, duration_in_seconds, project_name)
         db = update_db(work)
-        print(f'locking out after: {format_session(duration_in_seconds)}')
+        print(f'\nClocking out after: {format_session(duration_in_seconds)}')
         print_stats(db, start_date)
 
 if __name__ == "__main__":
