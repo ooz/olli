@@ -11,18 +11,17 @@ DATABASE_FILENAME = ".punchcard.csv"
 CSV_SEPARATOR = ','
 
 class Work(object):
-    def __init__(self, date, seconds, project=''):
+    def __init__(self, date, seconds):
         self.date = date
         self.seconds = int(seconds)
-        self.project = project
     def merge(self, other):
         if self.key() == other.key():
             self.seconds += other.seconds
         return self
     def key(self):
-        return self.date + self.project
+        return self.date
     def __str__(self):
-        return f'{self.date},{self.seconds},{self.project}'
+        return f'{self.date},{self.seconds}'
 
 def now():
     return datetime.datetime.now()
@@ -54,16 +53,7 @@ def difference_in_seconds(start, end):
 
 def print_help_and_exit():
     print(f'''punchcard.py: Time tracker, saves to {DATABASE_FILENAME}
-
-When terminated, prints total working time of today and this week.
-
-Examples:
-
-    # Tracks work time unrelated to any project until terminated
-    punchcard.py
-
-    # Tracks time for project 'programming' until terminated
-    punchcard.py programming''')
+When terminated, prints total working time of today and this week.''')
     sys.exit(0)
 
 def read_db():
@@ -74,10 +64,8 @@ def read_db():
             for line in lines:
                 comps = line.strip().split(CSV_SEPARATOR)
                 work = None
-                if len(comps) == 2:
+                if len(comps) >= 2:
                     work = Work(comps[0], comps[1])
-                if len(comps) > 2:
-                    work = Work(comps[0], comps[1], comps[2])
                 if work:
                     db[work.key()] = work
             return db
@@ -86,7 +74,7 @@ def read_db():
     return {}
 
 def write_db(db):
-    content = 'DATE,SECONDS,PROJECT\n' + '\n'.join([str(work) for work in db.values()]) + '\n'
+    content = 'DATE,SECONDS\n' + '\n'.join([str(work) for work in db.values()]) + '\n'
     with open(DATABASE_FILENAME, 'w') as f:
         f.write(content)
 
@@ -117,15 +105,9 @@ def main(args):
     if '-h' in args or '--help' in args:
         print_help_and_exit()
 
-    project_name = ''
-    if len(args):
-        project_name = args[0]
-        print(f'Clocking in: {project_name}')
-    else:
-        print('Clocking in...')
-
     start = now()
     start_date = now_date()
+    print(f'Clocking in at  {start}')
 
     try:
         prev_print = ''
@@ -140,9 +122,9 @@ def main(args):
     except KeyboardInterrupt:
         end = now()
         duration_in_seconds = difference_in_seconds(start, end)
-        work = Work(start_date, duration_in_seconds, project_name)
+        work = Work(start_date, duration_in_seconds)
         db = update_db(work)
-        print(f'\nClocking out after: {format_session(duration_in_seconds)}')
+        print(f'\nClocking out at {end} (after {format_session(duration_in_seconds)})')
         print_stats(db, start_date)
 
 if __name__ == "__main__":
