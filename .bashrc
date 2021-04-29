@@ -136,7 +136,7 @@ if [ -f /data/data/com.termux/files/usr/share/bash-completion/bash_completion ];
 fi
 
 # Extend PATH to include personal scripts
-export PATH=$PATH:~/.script/
+export PATH=$PATH:~/.scripts/
 # cd directly to projects
 export CDPATH=~/code
 
