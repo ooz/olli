@@ -1,9 +1,5 @@
-# cd aliases
 alias cd..='cd ..'
-
 alias mkdir='mkdir -p'
-
-# ls aliases
 alias lla='ls -alF'
 
 # Process management
@@ -19,6 +15,8 @@ alias vol='~/.scripts/volume.sh'
 
 # Git
 alias gitUserOoz='git config user.name "ooz"; git config user.email ooz@users.noreply.github.com'
+
+alias code='codium'
 
 # Java / Gradle / Idea
 alias gw="./gradlew $@"
