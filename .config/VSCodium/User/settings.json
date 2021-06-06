@@ -8,5 +8,7 @@
         "markdown",
         "latex",
         "plaintext"
-    ]
+    ],
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false
 }
