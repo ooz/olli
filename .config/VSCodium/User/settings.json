@@ -1,0 +1,14 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "spellright.language": [
+        "English (American)",
+        "German_de_DE"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.visible": false
+}
