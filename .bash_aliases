@@ -25,4 +25,5 @@ alias gradleBuild='./gradlew clean build'
 alias gradleBuildIdea='./gradlew clean build idea'
 alias gradleIdea='./gradlew idea'
 alias gradleRefresh='./gradlew build --refresh-dependencies -PrefreshDynamicDeps'
+alias gradleCleanLogs="find ~/.gradle -type f -name '*.out.log' -delete"
 
