@@ -5,6 +5,8 @@ alias lla='ls -alF'
 # Process management
 alias psm='ps aux | awk '"'"'{print $4i"\t"$11}'"'"' | sort | uniq -c | awk '"'"'{print $2" "$1" "$3}'"'"' | sort -nr'
 
+alias openNetworkConnections='netstat -natp'
+
 # Calendar aliases
 alias call='~/.scripts/cal.py -14'
 alias calle='vi ~/.calendar/calendar'
