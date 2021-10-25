@@ -98,8 +98,13 @@ def print_stats(db, start_date):
             if key.startswith(date):
                 seconds_week += db[key].seconds
     seconds_week += seconds_today
+
+    n = min(60, len(db))
+    n_day_avg = int(float(sum([db[key].seconds for key in list(db.keys())[-n:]])) / n)
+
     print(f'Today: {format_session(seconds_today)}')
     print(f'This week: {format_session(seconds_week)}')
+    print(f'{n}-day average: {format_session(n_day_avg)}')
 
 def main(args):
     if '-h' in args or '--help' in args:
