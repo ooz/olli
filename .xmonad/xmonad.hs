@@ -40,7 +40,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = -- M.fromList $ -- comment M.fro
          , ((modm .|. shiftMask , xK_Page_Down) , spawn "gnome-session-quit --power-off")
              ]
 
-newKeys x = M.union (keys defaultConfig x) (M.fromList (myKeys x))
+newKeys x = M.union (keys def x) (M.fromList (myKeys x))
 
 main = do
   xmonad $ gnomeConfig
