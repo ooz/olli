@@ -149,9 +149,11 @@ export PATH=$PATH:~/code/android/sdk/tools/:~/code/android/sdk/platform-tools/:~
 export PATH=$PATH:/opt/android-studio/bin/
 export ANDROID_HOME=~/code/android/sdk/
 
-# GOPATH support
-export GOPATH=$HOME/code/go
-export PATH=$PATH:$(go env GOPATH)/bin
+# Golang support
+if [ -x "$(command -v go)" ]; then
+    export GOPATH=$HOME/code/go
+    export PATH=$PATH:$(go env GOPATH)/bin
+fi
 
 # SDKMAN (orginal message: "THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!")
 export SDKMAN_DIR="$HOME/.sdkman"
