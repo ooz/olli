@@ -10,7 +10,7 @@ from configparser import ConfigParser
 from pathlib import Path
 import time
 
-PEOPLE_FILE = "/home/olli/Dropbox/zzzo/people/contacts.txt"
+PEOPLE_FILE = Path(__file__).resolve().parent / "people.txt"
 
 def today():
     now = time.localtime()
