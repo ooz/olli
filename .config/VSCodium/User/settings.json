@@ -10,5 +10,6 @@
         "plaintext"
     ],
     "workbench.startupEditor": "none",
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.location": "hidden",
+    "git.openRepositoryInParentFolders": "never"
 }
